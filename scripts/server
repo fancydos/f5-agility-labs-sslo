@@ -9,7 +9,14 @@ fi
 if [ -d _build ]; then
 	echo "Starting server on TCP/$PORT..."
 	echo "Enter <Ctrl+c> to stop the server..."
-	cd _build && python -mSimpleHTTPServer $PORT
+	cd _build 
+	echo "I AM IN THIS DIRECTORY: " ; pwd
+	ls -l ../../
+	for i in `cat ../../server-dependencies`
+	do
+		../../containthedocs-wget $i;
+	done
+	python -mSimpleHTTPServer $PORT
 else
 	echo "The _build directory doesn't exist... try running 'script/setup'"
 	exit 1
