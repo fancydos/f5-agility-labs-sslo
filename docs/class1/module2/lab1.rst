@@ -1,5 +1,5 @@
-Lab 2.1 Inbound Interception Rules
-----------------------------------
+Lab 2.1: Inbound Interception Rules
+-----------------------------------
 
 Task 1 - Create a new Interception Rule
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
