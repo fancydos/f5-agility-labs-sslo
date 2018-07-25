@@ -10,8 +10,6 @@ if [ -d _build ]; then
 	echo "Starting server on TCP/$PORT..."
 	echo "Enter <Ctrl+c> to stop the server..."
 	cd _build 
-	echo "I AM IN THIS DIRECTORY: " ; pwd
-	ls -l ../../
 	for i in `cat ../../server-dependencies`
 	do
 		../../containthedocs-wget $i;

@@ -1,5 +1,5 @@
-Inbound SSLO
-=============
+Module 2: Inbound SSLO
+======================
 
 In this lab, we will explore the settings required to deploy **Inbound
 SSLO**. We will be deploying SSLO in `Transparent Proxy` mode. This single

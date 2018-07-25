@@ -1,5 +1,5 @@
-Service Policies
-================
+Module 3: Service Policies
+==========================
 
 In this lab, we will review and modify the :guilabel:`Service Policies`
 that are created by the **Inbound** and **Outbound** SSLO templates.
