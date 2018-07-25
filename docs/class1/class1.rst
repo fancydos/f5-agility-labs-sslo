@@ -32,5 +32,4 @@ To continue please review the information about the Lab Environment.
 
    labinfo/labinfo
    module*/module*
-   conclusion
 
