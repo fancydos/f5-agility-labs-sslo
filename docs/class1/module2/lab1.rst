@@ -169,5 +169,3 @@ will accept connections.
    :width: 6.50000in
    :height: 1.69931in
 .. |serverside_ssl| image:: /_static/class1-module2-lab1-serverssl.png
-   :width: 6.50000in
-   :height: 1.69931in
