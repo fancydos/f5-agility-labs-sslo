@@ -12,7 +12,15 @@ Task 1 - Create a new Interception Rule
 
    |image46|
 
-#. Under the :guilabel:`General Properties` section, configure the following values:
+Task 2 - Create Wildcard Listener
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this step we will create a listener to intercept all inbound HTTPS
+traffic. After the configuration steps, this will be saved as a
+wildcard virtual server listening on port 443.
+   
+#. Under the :guilabel:`General Properties` section, configure the
+   following values:
 
    .. list-table::
       :widths: 50 50
@@ -31,24 +39,65 @@ Task 1 - Create a new Interception Rule
 
    |image47|
 
-#. Under the :guilabel:`Security Policy` section, select :guilabel:`Create New`.
+#. Under the :guilabel:`Security Policy` section, select
+   :guilabel:`Create New`.
 
    |image48|
 
-#. In the :guilabel:`General Settings` section of the Security Policy, set the name to `ssloT_inbound_ssl`.
+   The configuration GUI will redirect to the SSL settings
+   configuration page.
+
+#. In the :guilabel:`General Settings` section of the Security Policy,
+   set the name to `ssloT_inbound_ssl`.
 
    .. NOTE::
-      For **Inbound** configurations the :guilabel:`Forward Proxy` option should be `disabled`
+      For **Inbound** configurations the :guilabel:`Forward Proxy`
+      option should be `disabled`
 
    |image49|
 
-#. Under the :guilabel:`Client-side SSL` section, choose `wildcard.f5demolabs.com.crt` and `wildcard.f5demolabs.com.key` from the respective drop-down menus and click :guilabel:`Add`.
+#. Under the :guilabel:`Client-side SSL` section, choose
+   `wildcard.f5demolabs.com.crt` and `wildcard.f5demolabs.com.key` from
+   the respective drop-down menus and click :guilabel:`Add`.
 
    |image50|
 
-#. Leave all of the :guilabel:`Server-side SSL` settings at the defaults and click :guilabel:`Finished`. This will redirect back to the original :guilabel:`Inbound Listener` configuration screen.
+#. Under the section :guilabel:`Server-side SSL`, configure the
+   following values:
 
-#. In the :guilabel:`VLANs` section, choose the `/Common/outbound` VLAN from the :guilabel:`Available List` and click the left arrow to move it into :guilabel:`Selected`.
+   .. list-table::
+      :widths: 50 50
+      :header-rows: 1
+      :stub-columns: 1
+
+
+      * - **Property**
+        - **Value**
+      * - Expire Certificate Response Control
+        - ignore
+      * - Untrusted Certificate Response Control
+        - ignore
+  
+   |serverside_ssl|
+
+#. Review the settings and click :guilabel:`Finished`. This will
+   redirect back to the original :guilabel:`Inbound Listener`
+   configuration screen.
+
+Task 3 - Configure VLAN Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this step, we will define which VLAN interface that our listener
+will accept connections.
+
+.. NOTE::
+   Since we are configuring only for inbound traffic, it is important
+   that the wildcard listener only accept connections on the incoming
+   interface. In this case, the VLAN labeled `outbound`.
+
+#. In the :guilabel:`VLANs` section, choose the `/Common/outbound` VLAN
+   from the :guilabel:`Available List` and click the left arrow to move
+   it into :guilabel:`Selected`.
 
    |image51|
 
@@ -117,5 +166,8 @@ Task 1 - Create a new Interception Rule
    :width: 6.50000in
    :height: 2.93958in
 .. |image54| image:: /_static/image50.png
+   :width: 6.50000in
+   :height: 1.69931in
+.. |serverside_ssl| image:: /_static/class1-module2-lab1-serverssl.png
    :width: 6.50000in
    :height: 1.69931in
