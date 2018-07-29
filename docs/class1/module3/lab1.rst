@@ -41,8 +41,8 @@ Task 1 - View the Per-Request Policies
 
    |image64|
 
-#. Expand the macros :guilabel:`Service Chain Intercepted` and `Service
-   Chain Not Intercepted`
+#. Expand the macros :guilabel:`Service Chain Intercepted` and
+   :guilabel:`Service Chain Not Intercepted`
 
    |image65|
 

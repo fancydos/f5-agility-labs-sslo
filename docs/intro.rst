@@ -16,7 +16,7 @@ following GitHub repository:
 
 Bugs and Requests for enhancements are handled in two ways:
 
-- Fork the Github Repo, fix or enhance as requirea,d and submit a Pull Request
+- Fork the Github Repo, fix or enhance as required, and submit a Pull Request
 
   - https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 

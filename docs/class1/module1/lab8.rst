@@ -1,8 +1,8 @@
 Lab 1.8: Testing
 ----------------
 
-In order to test the configuration, we will open a HTTPS website and
-observer plain text traffic within the inspection zone.
+In order to test the configuration, we will open an HTTPS website and
+observe plain text traffic within the inspection zone.
 
 Task 1 - Issuing Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~
