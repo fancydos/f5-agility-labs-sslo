@@ -39,7 +39,7 @@ typically be an IDS/IPS, DLP, or Next-Gen Firewall (NGFW).
       * - To Service VLAN
         - ssloN_L3_in.app/ssloN_L3_in
       * - Node --> IP Address
-        - 198.19.1.64 (click :guilabel:`Add`)
+        - 198.19.64.64 (click :guilabel:`Add`)
       * - From Service VLAN
         - ssloN_L3_out.app/ssloN_L3_out
 
